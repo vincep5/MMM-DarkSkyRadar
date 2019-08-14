@@ -27,6 +27,7 @@ modules: [
   },
 ]
 ````
+If the radar is not loading try having the zoom level at an even number instead of an odd number.
 
 ## Idea
 A similar module to display a radar map with more options is : https://github.com/jojoduquartier/MMM-RAIN-RADAR
