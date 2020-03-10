@@ -20,7 +20,7 @@ Module.register("MMM-DarkSkyRadar",{
 	},
 	
 	getDom: function() {
-		let iframe = document.createElement("IFRAME");
+		let iframe = document.createElement("iframe");
 		iframe.id = "mmdarkskyradarframe";
 		iframe.classList.add("iframe");
 		iframe.style = "border:0;";
@@ -32,15 +32,8 @@ Module.register("MMM-DarkSkyRadar",{
 		let lon = this.config.lon;
 		let zoom = this.config.zoomLevel;
 
-		//For some reason the radar stopped showing if I had the zoom at an odd number integer.
-		//It would always work when browsing to it via a browser.  
-		//So for now I will keep this commented out since MM users have different types of use cases
-		//Check for an even number
-		// if (zoom % 2 !== 0) {
-		// 	zoom = this.defaults.zoomLevel;
-		// }
-
-		iframe.src = `https://darksky.net/map-embed/@radar,${lat},${lon},${zoom}.js?embed=true&timeControl=false&fieldControl=false&defaultField=radar`;
+		iframe.src = `https://maps.darksky.net/@radar,${lat},${lon},${zoom}?embed=true&timeControl=false&fieldControl=false&defaultField=radar`;
+		//iframe.src = `https://darksky.net/map-embed/@radar,${lat},${lon},${zoom}.js?embed=true&timeControl=false&fieldControl=false&defaultField=radar`;
 
 		return iframe;
 	},
