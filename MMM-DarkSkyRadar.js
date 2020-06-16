@@ -9,6 +9,7 @@ Module.register("MMM-DarkSkyRadar",{
 		width: "350px",
 		zoomLevel: 6,
 		updateInterval: 15 * 60 * 1000,
+		showMarker: false,
 	},
 
 	start: function () {
@@ -31,9 +32,9 @@ Module.register("MMM-DarkSkyRadar",{
 		let lat = this.config.lat;
 		let lon = this.config.lon;
 		let zoom = this.config.zoomLevel;
+		let marker = this.config.showMarker ? `&marker=${lat},${lon}` : "";
 
-		iframe.src = `https://maps.darksky.net/@radar,${lat},${lon},${zoom}?embed=true&timeControl=false&fieldControl=false&defaultField=radar`;
-		//iframe.src = `https://darksky.net/map-embed/@radar,${lat},${lon},${zoom}.js?embed=true&timeControl=false&fieldControl=false&defaultField=radar`;
+		iframe.src = `https://maps.darksky.net/@radar,${lat},${lon},${zoom}?embed=true&timeControl=false&fieldControl=false${marker}&defaultField=radar`;
 
 		return iframe;
 	},
