@@ -17,11 +17,12 @@ modules: [
     position: "top_right",
     header: "Radar",
     config: {
-        lat: "41.4026",   // Latitude
-        lon: "-88.8255",  // Longitude
-        height: "600px",  //optional default
-        width: "350px",   //optional default
-        zoomLevel: 6,     //optional default (the larger the more zoomed in)
+        lat: "41.4026",    // Latitude
+        lon: "-88.8255",   // Longitude
+        height: "600px",   //optional default
+        width: "350px",    //optional default
+        zoomLevel: 6,      //optional default (the larger the more zoomed in)
+        showMarker: false, //optional default
         updateInterval: 15 * 60 * 1000,  //optional default (15 minutes)
     }
   },
