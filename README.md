@@ -7,7 +7,13 @@ https://maps.darksky.net/
 ![screenshot1](screenshot1.JPG)
 
 ## Using the module
-run git clone https://github.com/vincep5/MMM-DarkSkyRadar from inside your MagicMirror/modules folder
+Go to your MagicMirror modules directory by entering `cd MagicMirror/modules`
+
+run `git clone https://github.com/vincep5/MMM-DarkSkyRadar`
+
+run `cd MMM-DarkSkyRadar` to get into the newly created folder
+
+run `npm install` to install the dependencies
 
 Add `MMM-DarkSkyRadar` module to the `modules` array in the `config/config.js` file:
 ````javascript
